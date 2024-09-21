@@ -2,6 +2,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
+import Shops from './pages/Shops';
 
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<Home/>} />
-
+      <Route path='/shops' element={<Shops/>} />
+      
     </Routes>
     
     </BrowserRouter>
