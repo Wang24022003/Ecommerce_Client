@@ -2,7 +2,9 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import { Link } from 'react-router-dom';
 import 'react-multi-carousel/lib/styles.css'
+
 const Categorys = () => {
+
     const categorys = [
         'Mobiles',
         'Laptops',
@@ -13,6 +15,7 @@ const Categorys = () => {
         'Home Decor',
         'Smart Watches',
     ]
+
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -43,9 +46,18 @@ const Categorys = () => {
             items: 1
         },
     }
+
+
+
     return (
         <div className='w-[87%] mx-auto relative'>
-             
+            <div className='w-full'>
+            <div className='text-center flex justify-center items-center flex-col text-3xl text-slate-600 font-bold relative pb-[35px]'>
+                <h2>Top Category </h2>
+                <div className='w-[100px] h-[2px] bg-[#059473] mt-4'></div>
+            </div>
+            </div>
+
                 <Carousel
                     autoPlay={true}
                     infinite={true}
@@ -59,6 +71,7 @@ const Categorys = () => {
                         <img src={`http://localhost:3000/images/products/${i+1}.webp`} alt="" />
                         <div className='absolute bottom-6 w-full mx-auto font-bold left-0 flex justify-center items-center'>
                          <span className='py-[2px] px-6 bg-[#3330305d] text-white'>{c}</span>
+
                         </div>
                         </div>
                         
@@ -69,4 +82,5 @@ const Categorys = () => {
              
     );
 };
+
 export default Categorys;
